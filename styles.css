@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #081326;
+}
+
+.background {
+    position: dynamic;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('images/background3.avif') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2; /* Ensure it's behind the photo */
+    opacity: 90%;
+}
+
+.intro-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    width: 80%;
+}
+
+.photo-wrapper {
+    margin-right: 20px;
+}
+
+.profile-photo {
+    width: 400px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 5%; /* Optional: make the photo circular */
+    border: 1px solid black; /* Optional: add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+}
+
+.intro-text {
+    color: black;
+    max-width: calc(100% - 420px); /* Ensure the text doesn't overflow the available space */
+    line-height: 1.5;
+    transform: translateX(60%);
+    font-size: x-large;
+    margin-bottom: 400px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.intro-text p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.content {
+    padding-top: 100vh; /* Start content below the full-screen background */
+    background: transparent;
+    min-height: 200vh; /* Make sure there's enough content to scroll */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    color: aliceblue;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 1px;
+    font-weight: normal;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
